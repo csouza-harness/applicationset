@@ -18,6 +18,8 @@ spec:
         repoURL: https://github.com/csouza-harness/appset-examples.git
         targetRevision: '{{target_revision}}'
         path: "guestbook/deployment"
+        plugin:
+          name: argocd-vault-plugin-kustomize
       destination:
         #server: https://kubernetes.default.svc
         server: '{{cluster_address}}'
