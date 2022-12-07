@@ -1,5 +1,5 @@
 {
   "cluster_name" : "prod",
   "cluster_address" : "https://kubernetes.default.svc",
-  "target_revision" : "master"
+  "target_revision" : "HD-141-release"
 }
