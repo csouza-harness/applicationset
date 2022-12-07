@@ -20,8 +20,16 @@ spec:
         path: "guestbook/deployment"
         plugin:
           name: argocd-vault-plugin-kustomize
+          env:
+            - name: VAULT_ADDR
+              value: aHR0cHM6Ly9zYW1wbGUtY2x1c3Rlci1wdWJsaWMtdmF1bHQtNzhkY2RmNDAuZmM0OWFkYzUuejEuaGFzaGljb3JwLmNsb3VkOjgyMDA=
+            - name: VAULT_TOKEN
+              value: aHZzLkNBRVNJRlFuOGNtd2tndUJqSGg1NDNIV2xnQzVoSjJVa0t4NmUtdjhjT1B2R095OUdpZ0tJbWgyY3k1TWIxZEVla1JUWVV0QlluUktUMnRqVVhOd1RteElNa1l1UkRSNlNVRVE0YjhH
+            - name: AVP_TYPE
+              value: dmF1bHQ=
+            - name: AVP_AUTH_TYPE
+              value: dG9rZW4=
       destination:
-        #server: https://kubernetes.default.svc
         server: '{{cluster_address}}'
         namespace: guestbook
       syncPolicy:

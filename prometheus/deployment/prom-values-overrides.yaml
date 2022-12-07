@@ -21,5 +21,3 @@ kubeStateMetrics:
 server:
   enabled: false
   useClusterRole: false
-  # namespaces:
-  #  - cassie-dev
