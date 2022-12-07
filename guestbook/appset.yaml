@@ -29,6 +29,8 @@ spec:
               value: vault
             - name: AVP_AUTH_TYPE
               value: token
+            - name: AVP_KV_VERSION
+              value: 2
       destination:
         server: '{{cluster_address}}'
         namespace: guestbook
