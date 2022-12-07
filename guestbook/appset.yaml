@@ -20,15 +20,6 @@ spec:
         path: "guestbook/deployment"
         plugin:
           name: argocd-vault-plugin-kustomize
-          env:
-            - name: VAULT_ADDR
-              value: https://sample-cluster-public-vault-78dcdf40.fc49adc5.z1.hashicorp.cloud:8200
-            - name: VAULT_TOKEN
-              value: hvs.CAESIFQn8cmwkguBjHh543HWlgC5hJ2UkKx6e-v8cOPvGOy9GigKImh2cy5Mb1dEekRTYUtBYnRKT2tjUXNwTmxIMkYuRDR6SUEQ4b8G
-            - name: AVP_TYPE
-              value: vault
-            - name: AVP_AUTH_TYPE
-              value: token
       destination:
         server: '{{cluster_address}}'
         namespace: guestbook
