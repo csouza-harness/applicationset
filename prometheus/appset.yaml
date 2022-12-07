@@ -19,7 +19,6 @@ spec:
         targetRevision: '{{target_revision}}'
         path: "prometheus/deployment"
       destination:
-        #server: https://kubernetes.default.svc
         server: '{{cluster_address}}'
         namespace: monitoring
       syncPolicy:
